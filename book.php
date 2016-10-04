@@ -1,7 +1,7 @@
 <?php
 if ( !empty($_POST) && isset($_POST) ) {
-    $filename = 'search.txt';
-    $myfile = fopen("search.txt", "a+");
+    $filename = 'borrow.txt';
+    $myfile = fopen("borrow.txt", "a+");
     $book_name = $_POST['book-name'];
     $name = $_POST['name'];
     $gender = $_POST['gender'];
@@ -64,15 +64,15 @@ if ( !empty($_POST) && isset($_POST) ) {
                             <option>通訊</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-warning">reset</button>
+                    <button type="submit" class="btn btn-primary">借書</button>
+                    <button type="reset" class="btn btn-warning">重置</button>
                 </form>
             </div>
             <div class="col-xl-4 pull-xl-4 col-lg-4 pull-lg-4">
                 <?php
-                    $filename = 'search.txt';
+                    $filename = 'borrow.txt';
                     if (file_exists($filename)) {
-                        $myfile = fopen("search.txt", "a+");?>
+                        $myfile = fopen("borrow.txt", "a+");?>
                         <table class="table table-sm">
                             <thead>
                                 <tr>
